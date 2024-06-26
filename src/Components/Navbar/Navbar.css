@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.top {
+  min-height: 90vh;
+  background: url("https://i.pinimg.com/564x/de/c0/e1/dec0e1d86817d93e3a89b4f25cb15ab7.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 1.3rem 10%;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links li a:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 130px;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-link-active {
+  animation: navLinkFade 0.5s ease-out forwards;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.subject {
+  color: white;
+  /* position: relative;
+    top:250px; */
+  font-weight: 700;
+  margin: 100px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.subject1 {
+  font-weight: 500;
+}
